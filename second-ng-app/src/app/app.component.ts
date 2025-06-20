@@ -1,8 +1,10 @@
 import { Component, computed, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
+  imports: [FormsModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -67,13 +69,13 @@ export class AppComponent {
   //   if (val == 'inc') this.count.set(this.count() + 1);
   //   if (val == 'dec') this.count.set(this.count() - 1);
   // }
-  x = signal(10);
-  y = signal(20);
-  z = computed(() => this.x() + this.y());
-
-  updateValue() {
-    console.log(this.z());
-    this.x.set(200);
-    console.log(this.z());
-  }
+  // x = signal(10);
+  // y = signal(20);
+  // z = computed(() => this.x() + this.y());
+  // updateValue() {
+  //   console.log(this.z());
+  //   this.x.set(200);
+  //   console.log(this.z());
+  // }
+  name = '';
 }
