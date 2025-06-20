@@ -23,7 +23,7 @@
   type="text"
 /> -->
 
-<h1>Get and set Input Field Value</h1>
+<!-- <h1>Get and set Input Field Value</h1>
 <h1>Name is : {{ displayName }}</h1>
 <input
   type="text"
@@ -40,4 +40,74 @@
 <input type="email" value="{{ email }}" placeholder="Enter Email" #emailField />
 <br />
 <button (click)="getEmail(emailField.value)">Get Value</button>
-<button (click)="setEmail()">Set Value</button>
+<button (click)="setEmail()">Set Value</button> -->
+
+<!-- <h1>If ELse ! Control flow</h1>
+<button (click)="hide()">Hide Div</button>
+<button (click)="show()">Show Div</button>
+
+@if (display) {
+<div style="width: 200px; height: 200px; background-color: aqua"></div>
+}
+
+<hr />
+
+<button (click)="Toggle()">
+  {{ displayToggle ? "Show Read Div" : "Show Gold Div" }}
+</button>
+
+@if(displayToggle){
+<div style="width: 200px; height: 200px; background-color: gold"></div>
+} @else {
+<div style="width: 200px; height: 200px; background-color: red"></div>
+} -->
+<!-- 
+<h1>ELse If ! Control flow</h1>
+<button (click)="setNumber(1)">green</button>
+<button (click)="setNumber(2)">red</button>
+<button (click)="setNumber(3)">yellow</button>
+<button (click)="setNumber(4)">other</button>
+<input
+  (input)="inputBox(inputval.value)"
+  type="number"
+  placeholder="Type Number"
+  #inputval
+/>
+@if(control==1){
+<div style="width: 100px; height: 100px; background-color: green"></div>
+} @else if(control==2){
+<div style="width: 100px; height: 100px; background-color: red"></div>
+} @else if(control==3){
+<div style="width: 100px; height: 100px; background-color: yellow"></div>
+} @else {
+<div style="width: 100px; height: 100px; background-color: black"></div>
+} -->
+
+<!-- <hr />
+<h1>For Loop</h1> -->
+
+<!-- @for (item of users; track item) {
+<h2>
+  <span>{{ item }}</span>
+</h2> }-->
+
+<!-- @for (item of student; track item; let id = $index) {
+<h2>
+  <span>{{ id + 1 }}</span>
+  <span>{{ item.name }}</span>
+  <span>{{ item.age }}</span>
+  <span>{{ item.email }}</span>
+</h2>
+} -->
+
+<!-- <h1>Basic of Signal</h1>
+
+<button (click)="updateValue('inc')">Increment Signal</button>
+<h2>{{ count() }}</h2>
+<button (click)="updateValue('dec')">Decrement Signal</button> -->
+
+<!-- <button (click)="count.set(count() + 1)">Increment Signal</button>
+<h2>{{ count() }}</h2>
+<button (click)="count.set(count() - 1)">Decrement Signal</button> -->
+
+<button (click)="updateValue()">Update Value</button>
