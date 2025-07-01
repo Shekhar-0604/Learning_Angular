@@ -1,1 +1,10 @@
 <h1 *ngIf="show">Learning Directive in Angular</h1>
+
+<div *ngFor="let item of user">
+  {{ item }}
+</div>
+
+<div [ngSwitch]="nSwit">
+  <div *ngSwitchCase="'A'">Letter A</div>
+  <div *ngSwitchDefault>Default</div>
+</div>
