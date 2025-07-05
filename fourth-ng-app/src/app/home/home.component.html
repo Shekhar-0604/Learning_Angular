@@ -5,7 +5,7 @@
 <!-- <button (click)="goToProfile()">Go to Profile</button> -->
 <!-- <a routerLink="profile">Go to Profile</a> -->
 
-<h1>User List</h1>
+<!-- <h1>User List</h1>
 
 <ul>
   @for (user of users; track user.id) {
@@ -15,4 +15,53 @@
   </li>
 
   }
-</ul>
+</ul> -->
+
+<!-- <h1>Forms in Angular</h1>
+
+<form action="" method="post">
+  <input type="text" placeholder="Enter userName" [formControl]="name" />
+  <br />
+  <br />
+  <input
+    type="password"
+    placeholder="Enter Password"
+    [formControl]="passwprd"
+  />
+  <br />
+  <br />
+  <button type="button" (click)="display()">Login</button>
+
+  <p>{{ name.value }}</p>
+  <p>{{ passwprd.value }}</p>
+</form> -->
+
+<!-- <h1>Form Grouping in Reactive Form</h1>
+<form [formGroup]="profileDetails" (ngSubmit)="submitData()">
+  <input type="text" placeholder="Enter userName" formControlName="name" />
+  <span *ngIf="name?.hasError('required')">*</span>
+  <span *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+    >Please Enter Name</span
+  >
+  <br />
+  <br />
+  <input
+    type="password"
+    placeholder="Enter Password"
+    formControlName="password"
+  />
+  <span *ngIf="password?.hasError('required')">*</span>
+  <span *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+    >Please Enter password</span
+  >
+  <br />
+  <br />
+  <input type="text" placeholder="Enter Email" formControlName="email" />
+  <span *ngIf="email?.hasError('required')">*</span>
+  <span *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    >Please Enter email</span
+  >
+  <br />
+  <br />
+  <button type="button" (click)="display()">Login</button>
+</form> -->

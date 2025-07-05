@@ -1,1 +1,15 @@
 <app-header></app-header> <router-outlet />
+
+<h1>Temple Driven Form</h1>
+<form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+  <input type="text" placeholder="Enter userName" name="name" ngModel />
+  <br />
+  <br />
+  <input type="range" min="0" max="25" name="range" ngModel />
+  <br />
+  <br />
+  <input type="password" placeholder="Enter Password" name="password" ngModel />
+  <br />
+  <br />
+  <button>Add User</button>
+</form>
