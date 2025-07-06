@@ -2,13 +2,24 @@
 
 <h1>Temple Driven Form</h1>
 <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
-  <input type="text" placeholder="Enter userName" name="name" ngModel />
+  <input
+    #name="ngModel"
+    type="text"
+    placeholder="Enter userName"
+    name="name"
+    ngModel
+  />
+  <span *ngIf="name.invalid && name.touched">Name is Required</span>
   <br />
   <br />
-  <input type="range" min="0" max="25" name="range" ngModel />
-  <br />
-  <br />
-  <input type="password" placeholder="Enter Password" name="password" ngModel />
+  <input
+    type="password"
+    #password="ngModel"
+    placeholder="Enter Password"
+    name="password"
+    ngModel
+  />
+  <span *ngIf="password.invalid && password.touched">password is Required</span>
   <br />
   <br />
   <button>Add User</button>
