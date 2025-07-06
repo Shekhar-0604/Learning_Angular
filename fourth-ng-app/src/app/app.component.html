@@ -5,6 +5,7 @@
   <input
     #name="ngModel"
     type="text"
+    required
     placeholder="Enter userName"
     name="name"
     ngModel
@@ -15,6 +16,9 @@
   <input
     type="password"
     #password="ngModel"
+    minlength="5"
+    maxlength="10"
+    required
     placeholder="Enter Password"
     name="password"
     ngModel
@@ -22,5 +26,5 @@
   <span *ngIf="password.invalid && password.touched">password is Required</span>
   <br />
   <br />
-  <button>Add User</button>
+  <button [disabled]="userForm.invalid">Add User</button>
 </form>
