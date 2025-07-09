@@ -1,2 +1,24 @@
-<h1>Pass Data to Child Components</h1>
-<app-user user="Shekhar Sharma"></app-user>
+<!-- <h1>Pass Data to Child Components</h1>
+<app-user [user]="selectedUSer.value"></app-user>
+
+<select #selectedUSer (change)="onUserChange(selectedUSer.value)" name="" id="">
+  <option value="Shekhar">Shekhar</option>
+  <option value="Nitin">Nitin</option>
+  <option value="Nisha">Nisha</option>
+  <option value="Shikha">Shikha</option>
+</select> -->
+
+<!-- <h1>Resuse Component</h1>
+
+@for (item of student; track item) {
+<div>
+  <app-user [item]="item"></app-user>
+</div>
+} -->
+
+<h1>Pass Data child to Component</h1>
+<app-user (getUsers)="HandleUsers($event)"></app-user>
+
+@for (user of users; track user) {
+<h1>{{ user }}</h1>
+}
