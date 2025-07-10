@@ -9,10 +9,20 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class UserComponent {
   // @Input() user: string = '';
   //   @Input() item: String = '';
-  users = ['SHah', 'Zee', 'Zack', 'Jhon', 'Kel'];
-  @Output() getUsers = new EventEmitter();
+  // users = ['SHah', 'Zee', 'Zack', 'Jhon', 'Kel'];
+  // @Output() getUsers = new EventEmitter();
+  // loadData() {
+  //   this.getUsers.emit(this.users);
+  // }
 
-  loadData() {
-    this.getUsers.emit(this.users);
+  constructor() {
+    console.log('constuctor call');
+  }
+  ngOnInit() {
+    console.log('ngOnInit call');
+  }
+
+  ngOnDestroy() {
+    console.log('Destroyed called');
   }
 }
